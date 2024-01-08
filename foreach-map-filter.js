@@ -37,7 +37,9 @@ Examples:
 
 */
 function showFirstAndLast(arr){
-    
+    return arr.map(function(value){
+      return value.charAt(0)+value.charAt(value.length-1)
+    });
 }
 
 /*
