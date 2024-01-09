@@ -52,7 +52,10 @@ Examples:
 
 */
 function addKeyAndValue(arr,key,value){
-    
+    arr.forEach(function(val) {
+        val[key] = value;
+    });
+    return arr;
 }
 
 /*
@@ -66,7 +69,21 @@ Examples:
     vowelCount('I Am awesome and so are you') // {i: 1, a: 4, e: 3, o: 3, u: 1};
 */
 function vowelCount(str){
-   
+   let splitArr = str.split('');
+   let obj = {};
+   const vowels = "aeiou";
+
+   splitArr.forEach(function(letter){
+    let lowercase = letter.toLowerCase();
+   if(vowels.indexOf(lowercase) !== -1) {
+    if(obj[lowercase]){
+     obj[lowercase]++;
+    } else{
+       obj[lowercase] = 1;
+    }
+   }
+});
+return obj;
 }
 
 /*
