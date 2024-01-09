@@ -206,5 +206,9 @@ Examples:
 */
 
 function doubleOddNumbers(arr) {
-    
+    return arr.filter(function(num){
+        return num%2 > 0;
+    }).map(function(num){
+        return num*2; 
+    });
 }
